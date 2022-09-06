@@ -57,31 +57,19 @@ namespace Data_Structures_and_Algorithms
         // 3 steps + 4n
         //Therefor Big 0(3 + 4n) or Big0(n) <-- simple version
 
-        public void rules()
-        {
-            Console.WriteLine("\n--------Big0 Rules--------");
-            Console.WriteLine("Rule 1: Worst Case");
-            Console.WriteLine("Always look at the Worst Case. If you have big0(1) and big0(n) in the same method. The Big0 is big0(n)");
-            Console.WriteLine("\nRule 2: Remove Constants");
-            Console.WriteLine("Big0(1 + n/2 + 100) =  Big0(n)");
-            Console.WriteLine("\nRule 3: Different terms for inputs");
-            Console.WriteLine("Think of the boxes method. What if there were two boxes? Therefore int[]boxes, and int[]moreBoxes");
-            Console.WriteLine("\nRule 4: Drop Non Dominants");
-        }
-
         //What is the big0 of this???
         public void arrayPairs(int[] boxes)
         {
-            
+
             Console.WriteLine("\n------What Boxes do we have??-----");
-            foreach(var box in boxes)
+            foreach (var box in boxes)
                 Console.WriteLine("Box: " + box);
 
             Console.WriteLine("\n-----Now print every pair of those boxes possible.-----");
             var totalcount = 0;
-            for(var i = 0; i < boxes.Length; i++)
+            for (var i = 0; i < boxes.Length; i++)
             {
-                for(var j = 0; j < boxes.Length; j++)
+                for (var j = 0; j < boxes.Length; j++)
                 {
                     if (boxes[i] != boxes[j])
                     {
@@ -93,6 +81,22 @@ namespace Data_Structures_and_Algorithms
             Console.WriteLine("The total number of pairs is " + totalcount + " box pairs.");
         }
         // A loop in a loop... So we are looking at loop 1 = Big0(n) + loop 2 which equals Big0(n) as well. So now we have Big0(n^2) <-- Quadratic Time
+        // This is really bad by the way.
+
+        public void rules()
+        {
+            Console.WriteLine("\n--------Big0 Rules--------");
+            Console.WriteLine("Rule 1: Worst Case");
+            Console.WriteLine("Always look at the Worst Case. If you have big0(1) and big0(n) in the same method. The Big0 is big0(n)");
+            Console.WriteLine("\nRule 2: Remove Constants");
+            Console.WriteLine("Big0(1 + n/2 + 100) =  Big0(n)");
+            Console.WriteLine("\nRule 3: Different terms for inputs");
+            Console.WriteLine("Think of the boxes method. What if there were two boxes? Therefore int[]boxes, and int[]moreBoxes");
+            Console.WriteLine("\nRule 4: Drop Non Dominants");
+            Console.WriteLine("So Big0(n + n^2) would in fact become Big(n^2)");
+        }
+
+
     }
     
 }

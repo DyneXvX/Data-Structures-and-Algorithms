@@ -1,0 +1,1 @@
+﻿using Data_Structures_and_Algorithms;string[] names = {"nemo"};string[] moreNames = { "random", "another", "Justin"};var goodCode = new Big0();goodCode.findNemo(names);goodCode.findNemo(moreNames);

@@ -25,7 +25,7 @@ namespace Data_Structures_and_Algorithms
             return false;
         }
 
-        //One for each name in the string array. Therefore we have a 0(n)
+        //One for each name in the string array. Therefore we have a 0(n) - also known as linear time.
     }
     
 }

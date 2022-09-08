@@ -1,4 +1,5 @@
-﻿using Data_Structures_and_Algorithms.Big0;
+﻿using Data_Structures___Algorithms.GoogleInterview;
+using Data_Structures_and_Algorithms.Big0;
 
 #region Big0 Lecture Notes
 
@@ -10,3 +11,12 @@ big0.spaceComplexity(boxes);
 big0.exercise();
 
 #endregion Big0 Lecture Notes
+
+#region Google Interview Video
+
+var google = new InterviewQuestion();
+
+google.interview();
+Console.WriteLine(google.interview02());
+
+#endregion Google Interview Video

@@ -69,5 +69,42 @@ namespace Data_Structures___Algorithms.GoogleInterview
             //keep in mind if I brought in two different values from the program.cs file instead of buiding them here, I could convert this to Big0(a * b) instead.
             //public bool interview02(array1, array2) <--> Something like this.
         }
+
+        public bool interveiew02Answer(string[] arr1, string[] arr2)
+        {
+            Console.WriteLine("\n-----Better Way to solve the interview question.-----");
+            List<string> map = new List<string>();
+
+            //I setup null checks becuase this was driving me nuts when thinking of ways to break this.
+            if (arr1 != null)
+            {
+                for (var i = 0; i < arr1.Length; i++)
+                {
+                    map.Add(arr1[i]);
+                }
+            }
+            else
+            {
+                return false;
+            }
+            //O(a)
+
+            if (arr2 != null)
+            {
+                for (var j = 0; j < arr2.Length; j++)
+                {
+                    if (map.Contains(arr2[j]))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            return false;
+            //O(b)
+
+            //Therefore this setup is O(a + b) Time Complexity
+            //O(n) Memeory complexity becuase I created the map to take in the first array.
+        }
     }
 }

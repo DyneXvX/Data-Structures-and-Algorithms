@@ -19,4 +19,9 @@ var google = new InterviewQuestion();
 google.interview();
 Console.WriteLine(google.interview02());
 
+//setting up the problem to take in two arrays here first.
+string[] array01 = { "a", "b", "c", "x" };
+string[] array02 = { "z", "y", "i" };
+Console.WriteLine(google.interveiew02Answer(array01, array02));
+
 #endregion Google Interview Video
